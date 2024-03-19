@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+/* header */
+header {
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+}
+.header_inner {
+    max-width: 1720px;
+    margin: 0 auto;
+    position: relative;
+    height: 80px;
+}
+header .logo {
+    position: absolute;
+    top: -20%; left: 0;
+}
+header .logo > a {
+    display: block;
+    width: 200px; height: 120px;
+    background: url(../img/la.logo.png) no-repeat;
+}
+header .gnb {
+    position: absolute;
+    top: 50%; left: 51.3%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+}
+header .gnb > li {
+    display: inline-block;
+    margin: 0 10px;
+}
+header .gnb > li > a {
+    display: block;
+    font-size: 20px;
+    padding: 5px;
+    color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    margin: 15px;
+}
+header .gnb > li > a:after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 1px;
+    background: #eb168a;
+    transition: all 0.6s;
+}
+header .gnb > li > a:hover:after {
+    width: 100%;
+}
+header .icon_area {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    right: 0;
+}
+header .icon_area > a {
+    padding: 5px 10px;
+    margin: 0 3px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+    transition: all 0.4s;
+    cursor: pointer;
+}
+header .icon_area > a:hover {
+    color: #fff;
+}
+header .icon_area a i {
+    font-size: 20px;
+}
+
+/* search */
+header .search {
+    position: relative;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
+header .search input {
+    width: 180px;
+    height: 32px; 
+    line-height: 32px;
+    padding-left: 10px;
+    border-radius: 75px;
+    border: 1px solid rgba(86, 69, 54, 0.606);
+    font-size: 14px;
+    margin-right: 10px;
+}
+header .search input:focus {
+    outline: 1px solid rgba(86, 69, 54, 0.606);
+}
+/* mypage */
+header .mypage {
+    position: absolute;
+    top: 56px;
+    right: -100px;
+    background: rgba(0, 0, 0, 0.6);
+    width: 220px;
+    display: none;
+    z-index: 11;
+}
+header .mupage li {
+    margin: 0 10px;
+}
+header .mypage li a {
+    display: block;
+    font-size: 24px;
+    padding: 5px;
+    color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    text-align: left;
+    margin: 15px;
+    line-height: 38px;
+}
+header .mypage li a:after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 1px;
+    background: #eb168a;
+    transition: all 0.6s;
+}
+header .mypage a:hover:after {
+    width: 70%;
+}
+
+/* 모바일 */
+/* 모바일 */
+/* 모바일 */
+
+@media screen and (max-width: 431px) {
+    header {
+        width:100%;
+        height: 70px;
+    }
+    header .logo {
+        top: -13px;
+        left: 20px;
+    }
+    header .logo > a {
+        width: 120px; 
+        height: 70px;
+        background-size: cover;
+    }
+    header .gnb {
+        display: none;
+        left: 60%;
+        transform: translate(-50%, -60%);
+        width:80%;
+    }
+
+    header .icon_area {
+        top: 40%; 
+        right: 25px;
+    }
+    header .icon_area > a {
+        padding: 5px 10px;
+        box-sizing: border-box;
+        margin: 0 3px;
+        font-size: 14px;
+        color: rgba(255,255,255,0.9);
+        transition: all 0.4s;
+    }
+    header .search input {
+        display: none;
+    } 
+    header .mypage {
+        position: absolute;
+        top: 48px;
+        right: -100px;
+        background: rgba(0, 0, 0, 0.6);
+        width: 220px;
+        display: none;
+        z-index: 11;
+    }
+    
+        
+}
